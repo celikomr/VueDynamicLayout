@@ -88,14 +88,14 @@
         color="teal"
         grow
       >
-        <v-btn @click="sheet = !sheet">
+        <v-btn>
           <span>Add items</span>
           <v-icon>mdi-plus-circle-outline</v-icon>
         </v-btn>
 
         <v-btn>
-          <span>Notifications</span>
-          <v-icon>mdi-bell-ring-outline</v-icon>
+          <span>Cancel Draft Order</span>
+          <v-icon>mdi-close-box-outline</v-icon>
         </v-btn>
 
         <v-btn>
@@ -103,23 +103,12 @@
           <v-icon>mdi-hammer-wrench</v-icon>
         </v-btn>
       </v-bottom-navigation>
-      <v-bottom-sheet v-model="sheet">
-        <v-sheet class="text-center" height="200px">
-          <v-btn class="mt-6" text color="red" @click="sheet = !sheet">
-            close
-          </v-btn>
-          <div class="py-3">
-            This is a bottom sheet using the controlled by v-model instead of
-            activator
-          </div>
-        </v-sheet>
-      </v-bottom-sheet>
     </v-container>
   </v-main>
 </template>
 
 <script>
-import Header from "@/components/Header";
+import Header from "@/components/common/Header";
 
 const avatars = [
   "?accessoriesType=Blank&avatarStyle=Circle&clotheColor=PastelGreen&clotheType=ShirtScoopNeck&eyeType=Wink&eyebrowType=UnibrowNatural&facialHairColor=Black&facialHairType=MoustacheMagnum&hairColor=Platinum&mouthType=Concerned&skinColor=Tanned&topType=Turban",
@@ -141,7 +130,6 @@ export default {
     open: [],
     users: [],
     value: 1,
-    sheet: false,
   }),
 
   computed: {

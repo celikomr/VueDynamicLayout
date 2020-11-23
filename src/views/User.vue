@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import UserList from "@/components/UserList";
+import UserList from "@/components/user/UserList";
 import { mapActions } from "vuex";
 
 export default {

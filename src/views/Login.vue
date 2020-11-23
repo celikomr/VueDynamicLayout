@@ -81,7 +81,7 @@ export default {
       if (this.$refs.form.validate()) {
         this.$refs.form.reset();
         this.$refs.form.resetValidation();
-        this.$router.push("/home");
+        this.$router.push("/order-entry");
       }
     },
   },
