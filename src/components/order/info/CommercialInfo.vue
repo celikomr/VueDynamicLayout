@@ -1,5 +1,6 @@
 <template>
   <v-container>
+    <h2 class="mb-3 font-weight-regular">Commercial Info</h2>
     <v-row>
       <v-col cols="12" md="3">
         <v-text-field

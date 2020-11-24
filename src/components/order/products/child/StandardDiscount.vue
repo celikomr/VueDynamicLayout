@@ -1,5 +1,5 @@
 <template>
-    <div>
-        <h1>Standard Discount</h1>
-    </div>
+  <div>
+    <h2 class="mb-3 font-weight-regular">Standard Discount</h2>
+  </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-    <div>
-        <h1>Smart Irrigation</h1>
-    </div>
+  <div>
+    <h2 class="mb-3 font-weight-regular">Smart Irrigation</h2>
+  </div>
 </template>

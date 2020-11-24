@@ -27,7 +27,7 @@
 
           <v-divider vertical></v-divider>
 
-          <v-col cols="12" md="8" class="d-flex text-center">
+          <v-col cols="12" md="8" class="d-flex">
             <v-scroll-y-transition mode="out-in">
               <keep-alive>
                 <component :is="selectedComponent"></component>
@@ -79,7 +79,7 @@ export default {
     initiallyOpen: ["public"],
     selectedComponent: "CommercialInfo",
     files: {
-      info: "mdi-folder-settings-outline",
+      info: "mdi-file-document-outline",
       main: "mdi-city-variant-outline",
       child: "mdi-home-city-outline",
     },
