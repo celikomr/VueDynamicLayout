@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import CommercialInfo from "../components/info/CommercialInfo";
+import CommercialInfo from "../components/order/info/CommercialInfo";
 
 export default {
   components: {

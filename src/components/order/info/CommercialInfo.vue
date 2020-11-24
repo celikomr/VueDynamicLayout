@@ -142,6 +142,7 @@ export default {
     date: new Date().toISOString().substr(0, 10),
     dateFormatted: vm.formatDate(new Date().toISOString().substr(0, 10)),
     menu: false,
+    items: ["Foo", "Bar", "Fizz", "Buzz"],
   }),
 
   computed: {
