@@ -37,18 +37,26 @@
         </v-row>
         <v-divider></v-divider>
         <v-card elevation="0" style="background-color: #f5f5f5">
-          <v-btn text class="mr-3 text-capitalize">
-            <v-icon left>mdi-plus-circle-outline</v-icon>
-            Add items
-          </v-btn>
-          <v-btn text class="mr-3 text-capitalize">
-            <v-icon left>mdi-delete-outline</v-icon>
-            Delete items
-          </v-btn>
-          <v-btn text class="mr-3 text-capitalize">
-            <v-icon left>mdi-close-box-outline</v-icon>
-            Cancel Draft Order
-          </v-btn>
+          <v-row>
+            <v-col cols="12" md="2">
+              <v-btn block text class="text-capitalize">
+                <v-icon left>mdi-plus-circle-outline</v-icon>
+                Add items
+              </v-btn>
+            </v-col>
+            <v-col cols="12" md="2">
+              <v-btn block text class="mr-3 text-capitalize">
+                <v-icon left>mdi-delete-outline</v-icon>
+                Delete items
+              </v-btn>
+            </v-col>
+            <v-col cols="12" md="2">
+              <v-btn block text class="mr-3 text-capitalize">
+                <v-icon left>mdi-close-box-outline</v-icon>
+                Cancel Draft Order
+              </v-btn>
+            </v-col>
+          </v-row>
         </v-card>
       </v-card>
     </v-container>
