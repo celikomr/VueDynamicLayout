@@ -5,7 +5,15 @@
       <v-card outlined class="my-13" style="background-color: #f5f5f5">
         <v-row class="pa-4" justify="space-between">
           <v-col cols="12" md="3">
-            <v-treeview :open="initiallyOpen" :items="items" item-key="name">
+            <v-treeview
+              v-model="tree"
+              :open="initiallyOpen"
+              :items="items"
+              activatable
+              item-key="name"
+              open-on-click
+              @update:active="activate"
+            >
               <template v-slot:prepend="{ item, open }">
                 <v-icon v-if="!item.file">
                   {{ open ? "mdi-folder-open" : "mdi-folder" }}
@@ -13,14 +21,6 @@
                 <v-icon v-else>
                   {{ files[item.file] }}
                 </v-icon>
-              </template>
-              <template slot="label" slot-scope="{ item }">
-                <v-btn
-                  text
-                  class="text-capitalize"
-                  @click="component(item.type)"
-                  >{{ item.name }}</v-btn
-                >
               </template>
             </v-treeview>
           </v-col>
@@ -85,6 +85,7 @@ export default {
   data: () => ({
     item: [],
     initiallyOpen: ["public"],
+    tree: [],
     selectedComponent: "CommercialInfo",
     files: {
       info: "mdi-file-document-outline",
@@ -135,24 +136,24 @@ export default {
     ],
   }),
   methods: {
-    component(type) {
-      switch (type) {
-        case "0":
+    activate(item) {
+      switch (item[0]) {
+        case "commercial info":
           this.selectedComponent = "CommercialInfo";
           break;
-        case "1":
+        case "customer info":
           this.selectedComponent = "CustomerInfo";
           break;
-        case "2":
+        case "smart lighting":
           this.selectedComponent = "SmartLighting";
           break;
-        case "3":
+        case "standard discount":
           this.selectedComponent = "StandardDiscount";
           break;
-        case "4":
+        case "smart irrigation":
           this.selectedComponent = "SmartIrrigation";
           break;
-        case "5":
+        case "iot device":
           this.selectedComponent = "IotDevice";
           break;
         default:
